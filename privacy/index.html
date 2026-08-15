@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="How Exile processes data while providing Discord moderation features."
+    >
+    <title>Privacy — Exile</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="wordmark" href="/" aria-label="Exile home">Exile</a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/privacy/" aria-current="page">Privacy</a>
+      </nav>
+    </header>
+
+    <main class="policy-page">
+      <header class="policy-introduction">
+        <h1 class="policy-title">Privacy</h1>
+        <p class="policy-summary">
+          This page explains how Exile handles data while providing moderation
+          features in Discord.
+        </p>
+      </header>
+
+      <div class="policy-body">
+        <section class="policy-section" aria-labelledby="privacy-data">
+          <h2 id="privacy-data">What Exile processes</h2>
+          <div>
+            <p>
+              Exile automatically processes Discord message content and related
+              metadata in servers where it operates to detect spam. This can include
+              user, server, channel, and message identifiers; usernames and channel
+              names; timestamps; attachments and stickers; member and permission
+              information; and moderation actions or errors.
+            </p>
+          </div>
+        </section>
+
+        <section class="policy-section" aria-labelledby="privacy-use">
+          <h2 id="privacy-use">How data is used</h2>
+          <div>
+            <p>
+              Exile uses this data to identify and respond to spam, remove affected
+              messages, take configured moderation actions, create incident receipts,
+              and let authorized moderators review and resolve incidents.
+            </p>
+            <p>
+              Exile does not sell Discord data, use it for advertising, or use message
+              content to train artificial intelligence models.
+            </p>
+          </div>
+        </section>
+
+        <section class="policy-section" aria-labelledby="privacy-storage">
+          <h2 id="privacy-storage">Storage</h2>
+          <div>
+            <p>
+              Exile does not write ordinary Discord message content to a separate
+              persistent database. Message data may remain temporarily in runtime
+              memory and service caches while Exile operates.
+            </p>
+            <p>
+              Hosting systems may retain limited operational logs, such as identifiers,
+              channel names, action results, and error information, for operation and
+              troubleshooting. Exile also retains the server configuration needed to
+              operate, which can include the server name and server, channel, and role
+              identifiers.
+            </p>
+          </div>
+        </section>
+
+        <section class="policy-section" aria-labelledby="privacy-receipts">
+          <h2 id="privacy-receipts">Receipts in Discord</h2>
+          <div>
+            <p>
+              When Exile responds to an incident, a receipt is posted inside Discord.
+              It may contain account identifiers, message evidence, copied images,
+              channel names, and the outcome of moderation actions.
+            </p>
+            <p>
+              Receipts are ordinary Discord messages and remain in the server until
+              someone with appropriate permissions deletes them. Exile does not keep a
+              separate receipt database.
+            </p>
+          </div>
+        </section>
+
+        <section class="policy-section" aria-labelledby="privacy-sharing">
+          <h2 id="privacy-sharing">Sharing</h2>
+          <div>
+            <p>
+              Data is sent to Discord to perform moderation actions and post receipts.
+              Service providers used to host and operate Exile may process limited data
+              on the operator's behalf. Exile does not disclose Discord data to
+              advertisers or data brokers.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

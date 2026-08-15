@@ -63,6 +63,8 @@ main {
 .masthead {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
   min-height: 4.75rem;
   border-bottom: 1px solid var(--line);
 }
@@ -75,6 +77,22 @@ main {
   text-transform: uppercase;
 }
 
+.primary-nav {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--ash);
+  font-size: 0.78rem;
+}
+
+.primary-nav a {
+  text-decoration: none;
+}
+
+.primary-nav a:hover,
+.primary-nav a[aria-current="page"] {
+  color: var(--bone);
+}
+
 main {
   padding-block: clamp(5rem, 10vw, 9rem) 7rem;
 }
@@ -84,9 +102,13 @@ main {
 }
 
 h1 {
-  margin: 0 0 0 -0.086em;
+  margin: 0;
   font: 400 clamp(5rem, 13vw, 10rem) / 0.8 var(--display);
   letter-spacing: -0.055em;
+}
+
+.introduction h1 {
+  margin-left: -0.086em;
 }
 
 .summary {
@@ -137,6 +159,51 @@ h1 {
   border-bottom: 1px solid var(--oxide);
 }
 
+.policy-introduction {
+  max-width: 55rem;
+}
+
+.policy-title {
+  font-size: clamp(4.75rem, 12vw, 9rem);
+}
+
+.policy-summary {
+  max-width: 43rem;
+  margin: clamp(2.4rem, 5vw, 4rem) 0 0;
+  color: #d2d1ca;
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+}
+
+.policy-body {
+  width: min(100%, 64rem);
+  margin: clamp(6rem, 12vw, 11rem) 0 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+
+.policy-section {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(0, 2fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  padding: 2.4rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.policy-section h2 {
+  margin: 0;
+  font: 400 1.45rem/1.08 var(--display);
+  letter-spacing: -0.025em;
+}
+
+.policy-section p {
+  max-width: 48rem;
+  margin: 0;
+  color: #ccccc5;
+}
+
+.policy-section p + p {
+  margin-top: 1rem;
+}
+
 @media (max-width: 40rem) {
   .masthead,
   main {
@@ -153,6 +220,20 @@ h1 {
 
   .receipt-placeholder {
     margin-top: 6rem;
+  }
+
+  .primary-nav {
+    gap: 1rem;
+    font-size: 0.72rem;
+  }
+
+  .policy-section {
+    display: block;
+    padding: 2rem 0 2.4rem;
+  }
+
+  .policy-section h2 {
+    margin-bottom: 1rem;
   }
 
 }
