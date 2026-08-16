@@ -5,17 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Exile is a Discord moderation bot that catches spam and leaves a receipt for moderators."
+      content="Exile monitors your Discord server for spam and stops it."
     >
     <title>Exile — Discord moderation</title>
     <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="preload"
+      href="/assets/fonts/atkinson-hyperlegible-next-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    >
+    <link
+      rel="preload"
+      href="/assets/fonts/karrik-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    >
+    <link rel="stylesheet" href="styles.css?v=2">
   </head>
   <body>
     <header class="masthead">
       <a class="wordmark" href="/" aria-label="Exile home">Exile</a>
       <nav class="primary-nav" aria-label="Primary navigation">
         <a href="/" aria-current="page">Home</a>
+        <a href="#contact">Contact</a>
         <a href="/privacy/">Privacy</a>
       </nav>
     </header>
@@ -24,16 +39,46 @@
       <section class="introduction" aria-labelledby="page-title">
         <h1 id="page-title">Exile</h1>
         <p class="summary">
-          Exile is a Discord moderation bot that catches spam and leaves a receipt
-          for moderators.
+          Exile monitors your Discord server for spam and stops it.
         </p>
       </section>
 
-      <figure class="receipt-placeholder">
-        <div class="placeholder-field" role="img" aria-label="Placeholder for a receipt screenshot">
+      <figure class="log-placeholder">
+        <div class="placeholder-field" role="img" aria-label="Placeholder for a Discord log screenshot">
           <span>Placeholder</span>
         </div>
       </figure>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <h2 id="contact-title">Contact</h2>
+        </div>
+
+        <form
+          class="contact-form"
+          name="contact"
+          method="post"
+          action="/thanks/"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact">
+          <p class="form-trap">
+            <label>Do not fill this out <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <label for="contact-name">Name <span>(optional)</span></label>
+          <input id="contact-name" name="name" type="text" autocomplete="name">
+
+          <label for="contact-email">Email</label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" required>
+
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="6" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
     </main>
   </body>
 </html>

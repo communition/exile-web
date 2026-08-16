@@ -9,13 +9,28 @@
     >
     <title>Privacy — Exile</title>
     <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="../styles.css">
+    <link
+      rel="preload"
+      href="/assets/fonts/atkinson-hyperlegible-next-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    >
+    <link
+      rel="preload"
+      href="/assets/fonts/karrik-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    >
+    <link rel="stylesheet" href="../styles.css?v=2">
   </head>
   <body>
     <header class="masthead">
       <a class="wordmark" href="/" aria-label="Exile home">Exile</a>
       <nav class="primary-nav" aria-label="Primary navigation">
         <a href="/">Home</a>
+        <a href="/#contact">Contact</a>
         <a href="/privacy/" aria-current="page">Privacy</a>
       </nav>
     </header>
@@ -40,6 +55,10 @@
               names; timestamps; attachments and stickers; member and permission
               information; and moderation actions or errors.
             </p>
+            <p>
+              This processing is automated and is used to identify spam patterns, not
+              to build a memory or profile of conversations.
+            </p>
           </div>
         </section>
 
@@ -48,8 +67,8 @@
           <div>
             <p>
               Exile uses this data to identify and respond to spam, remove affected
-              messages, take configured moderation actions, create incident receipts,
-              and let authorized moderators review and resolve incidents.
+              messages, take configured moderation actions, post a log of what
+              happened, and let authorized moderators review and resolve incidents.
             </p>
             <p>
               Exile does not sell Discord data, use it for advertising, or use message
@@ -62,32 +81,33 @@
           <h2 id="privacy-storage">Storage</h2>
           <div>
             <p>
-              Exile does not write ordinary Discord message content to a separate
-              persistent database. Message data may remain temporarily in runtime
-              memory and service caches while Exile operates.
+              Exile does not maintain a separate archive of ordinary Discord messages.
+              Message data may remain temporarily in runtime memory and service caches
+              while Exile operates.
             </p>
             <p>
               Hosting systems may retain limited operational logs, such as identifiers,
               channel names, action results, and error information, for operation and
-              troubleshooting. Exile also retains the server configuration needed to
-              operate, which can include the server name and server, channel, and role
-              identifiers.
+              troubleshooting. Exile stores the Discord identifiers and settings needed
+              to operate in each server. Depending on the server's configuration, this
+              may include server, channel, role, and user identifiers; moderation
+              preferences; protection status; and configuration timestamps.
             </p>
           </div>
         </section>
 
-        <section class="policy-section" aria-labelledby="privacy-receipts">
-          <h2 id="privacy-receipts">Receipts in Discord</h2>
+        <section class="policy-section" aria-labelledby="privacy-logs">
+          <h2 id="privacy-logs">Logs in Discord</h2>
           <div>
             <p>
-              When Exile responds to an incident, a receipt is posted inside Discord.
-              It may contain account identifiers, message evidence, copied images,
-              channel names, and the outcome of moderation actions.
+              When Exile responds to an incident, Exile posts a log inside Discord.
+              The log may contain account identifiers, message evidence, copied
+              images, channel names, and the outcome of moderation actions.
             </p>
             <p>
-              Receipts are ordinary Discord messages and remain in the server until
+              These logs are ordinary Discord messages and remain in the server until
               someone with appropriate permissions deletes them. Exile does not keep a
-              separate receipt database.
+              separate log database.
             </p>
           </div>
         </section>
@@ -96,10 +116,14 @@
           <h2 id="privacy-sharing">Sharing</h2>
           <div>
             <p>
-              Data is sent to Discord to perform moderation actions and post receipts.
+              Data is sent to Discord to perform moderation actions and post logs.
               Service providers used to host and operate Exile may process limited data
               on the operator's behalf. Exile does not disclose Discord data to
               advertisers or data brokers.
+            </p>
+            <p>
+              Information submitted through the contact form is used to respond to your
+              message and may be processed by the site's hosting provider.
             </p>
           </div>
         </section>
