@@ -1,0 +1,337 @@
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/atkinson-hyperlegible-next-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Karrik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/karrik-regular.woff2") format("woff2");
+}
+
+:root {
+  color-scheme: dark;
+  --gunmetal: #1a1f1e;
+  --gunmetal-deep: #121614;
+  --bone: #e7e2d7;
+  --ash: #a6aaa3;
+  --oxide: #7f6047;
+  --line: rgb(166 170 163 / 22%);
+  --body: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", "Helvetica Neue", sans-serif;
+  --display: "Karrik", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--gunmetal-deep);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(180deg, transparent 0 76%, rgb(71 55 44 / 36%) 92%, rgb(75 53 38 / 72%) 100%),
+    var(--gunmetal);
+  color: var(--bone);
+  font: 17px/1.55 var(--body);
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--oxide);
+  outline-offset: 5px;
+}
+
+.masthead,
+main {
+  width: min(100% - 4rem, 80rem);
+  margin-inline: auto;
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 4.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  font-family: var(--display);
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.primary-nav {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--ash);
+  font-size: 0.78rem;
+}
+
+.primary-nav a {
+  text-decoration: none;
+}
+
+.primary-nav a:hover,
+.primary-nav a[aria-current="page"] {
+  color: var(--bone);
+}
+
+main {
+  padding-block: clamp(5rem, 10vw, 9rem) 7rem;
+}
+
+.introduction {
+  max-width: 52rem;
+}
+
+h1 {
+  margin: 0;
+  font: 400 clamp(5rem, 13vw, 10rem) / 0.8 var(--display);
+  letter-spacing: -0.055em;
+}
+
+.introduction h1 {
+  margin-left: -0.086em;
+}
+
+.summary {
+  max-width: 39rem;
+  margin: clamp(2.4rem, 5vw, 4rem) 0 0;
+  color: #d2d1ca;
+  font-size: clamp(1.15rem, 1.75vw, 1.3rem);
+  line-height: 1.5;
+}
+
+.log-placeholder {
+  width: min(100%, 64rem);
+  margin: clamp(6rem, 12vw, 11rem) 0 0 auto;
+}
+
+.placeholder-field {
+  position: relative;
+  display: grid;
+  min-height: clamp(18rem, 48vw, 34rem);
+  place-items: center;
+  border: 1px solid var(--line);
+  background: rgb(11 14 13 / 20%);
+  color: var(--ash);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.placeholder-field::before,
+.placeholder-field::after {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  content: "";
+}
+
+.placeholder-field::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid var(--oxide);
+  border-left: 1px solid var(--oxide);
+}
+
+.placeholder-field::after {
+  right: -1px;
+  bottom: -1px;
+  border-right: 1px solid var(--oxide);
+  border-bottom: 1px solid var(--oxide);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(0, 2fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  width: 100%;
+  margin: clamp(7rem, 14vw, 12rem) 0 0;
+  padding: 2.4rem 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.contact h2 {
+  margin: 0;
+  font: 400 clamp(2.75rem, 5vw, 4.75rem) / 0.9 var(--display);
+  letter-spacing: -0.045em;
+}
+
+.contact-form {
+  display: grid;
+  align-content: start;
+  justify-self: end;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.contact-form label {
+  margin-bottom: 0.55rem;
+  color: var(--ash);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-form label span {
+  color: rgb(166 170 163 / 65%);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin: 0 0 2rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgb(166 170 163 / 38%);
+  border-radius: 0;
+  outline: 0;
+  background: rgb(11 14 13 / 22%);
+  color: var(--bone);
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 9rem;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--oxide);
+  box-shadow: 0 0 0 1px var(--oxide);
+}
+
+.contact-form button {
+  justify-self: start;
+  min-width: 7.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--oxide);
+  background: transparent;
+  color: var(--bone);
+  font: 0.8rem/1 var(--body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: var(--oxide);
+}
+
+.contact-form button:focus-visible {
+  outline: 2px solid var(--bone);
+  outline-offset: 4px;
+}
+
+.form-trap {
+  display: none;
+}
+
+.policy-introduction {
+  max-width: 55rem;
+}
+
+.policy-title {
+  font-size: clamp(4.75rem, 12vw, 9rem);
+}
+
+.policy-summary {
+  max-width: 43rem;
+  margin: clamp(2.4rem, 5vw, 4rem) 0 0;
+  color: #d2d1ca;
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+}
+
+.policy-body {
+  width: min(100%, 64rem);
+  margin: clamp(6rem, 12vw, 11rem) 0 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+
+.policy-section {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(0, 2fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  padding: 2.4rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.policy-section h2 {
+  margin: 0;
+  font: 400 1.45rem/1.08 var(--display);
+  letter-spacing: -0.025em;
+}
+
+.policy-section p {
+  max-width: 48rem;
+  margin: 0;
+  color: #ccccc5;
+}
+
+.policy-section p + p {
+  margin-top: 1rem;
+}
+
+@media (max-width: 40rem) {
+  .masthead,
+  main {
+    width: min(100% - 2.5rem, 80rem);
+  }
+
+  .masthead {
+    min-height: 4rem;
+  }
+
+  main {
+    padding-block: 4.5rem 5rem;
+  }
+
+  .log-placeholder {
+    margin-top: 6rem;
+  }
+
+  .primary-nav {
+    gap: 1rem;
+    font-size: 0.72rem;
+  }
+
+  .policy-section {
+    display: block;
+    padding: 2rem 0 2.4rem;
+  }
+
+  .policy-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  .contact {
+    display: block;
+    margin-top: 7rem;
+    padding-top: 2rem;
+  }
+
+  .contact-copy {
+    margin-bottom: 3.5rem;
+  }
+
+}
