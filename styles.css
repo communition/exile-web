@@ -36,6 +36,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   margin: 0;
   background:
@@ -55,7 +57,9 @@ a:focus-visible {
 }
 
 .masthead,
-main {
+main,
+.site-footer {
+  margin-top: auto;
   width: min(100% - 4rem, 80rem);
   margin-inline: auto;
 }
@@ -119,44 +123,28 @@ h1 {
   line-height: 1.5;
 }
 
-.log-placeholder {
-  width: min(100%, 64rem);
-  margin: clamp(6rem, 12vw, 11rem) 0 0 auto;
+.home-page {
+  padding-top: clamp(3rem, 6vw, 5rem);
 }
 
-.placeholder-field {
-  position: relative;
-  display: grid;
-  min-height: clamp(18rem, 48vw, 34rem);
-  place-items: center;
-  border: 1px solid var(--line);
-  background: rgb(11 14 13 / 20%);
-  color: var(--ash);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-align: center;
+.hero .summary {
+  max-width: 39rem;
+  margin-top: 2rem;
 }
 
-.placeholder-field::before,
-.placeholder-field::after {
-  position: absolute;
-  width: 2.5rem;
-  height: 2.5rem;
-  content: "";
+.hero-art {
+  width: 100%;
+  margin: clamp(2.5rem, 5vw, 4rem) 0 0;
 }
 
-.placeholder-field::before {
-  top: -1px;
-  left: -1px;
-  border-top: 1px solid var(--oxide);
-  border-left: 1px solid var(--oxide);
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.placeholder-field::after {
-  right: -1px;
-  bottom: -1px;
-  border-right: 1px solid var(--oxide);
-  border-bottom: 1px solid var(--oxide);
+.home-page .contact {
+  margin-top: clamp(4rem, 7vw, 6rem);
 }
 
 .contact {
@@ -294,7 +282,8 @@ h1 {
 
 @media (max-width: 40rem) {
   .masthead,
-  main {
+  main,
+  .site-footer {
     width: min(100% - 2.5rem, 80rem);
   }
 
@@ -304,10 +293,6 @@ h1 {
 
   main {
     padding-block: 4.5rem 5rem;
-  }
-
-  .log-placeholder {
-    margin-top: 6rem;
   }
 
   .primary-nav {
@@ -334,4 +319,11 @@ h1 {
     margin-bottom: 3.5rem;
   }
 
+}
+
+.site-footer {
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--ash);
+  font-size: 0.78rem;
 }
