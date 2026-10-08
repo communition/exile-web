@@ -327,3 +327,20 @@ h1 {
   color: var(--ash);
   font-size: 0.78rem;
 }
+
+.gallery-example {
+  max-width: 48rem;
+  margin: 3rem auto 0;
+}
+
+.gallery-example img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-example figcaption {
+  margin-top: 1rem;
+  color: var(--ash);
+  font-size: 0.85rem;
+}
