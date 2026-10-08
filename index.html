@@ -32,10 +32,12 @@
         <a href="/" aria-current="page">Home</a>
         <a href="#contact">Contact</a>
         <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
       </nav>
     </header>
 
-    <main>
+    <main class="home-page">
+      <div class="hero">
       <section class="introduction" aria-labelledby="page-title">
         <h1 id="page-title">Exile</h1>
         <p class="summary">
@@ -43,11 +45,10 @@
         </p>
       </section>
 
-      <figure class="log-placeholder">
-        <div class="placeholder-field" role="img" aria-label="Placeholder for a Discord log screenshot">
-          <span>Placeholder</span>
-        </div>
+      <figure class="hero-art">
+        <img src="assets/lore-grub.png" alt="Exile watching a small grub on the ground." fetchpriority="high">
       </figure>
+      </div>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div class="contact-copy">
@@ -80,5 +81,8 @@
         </form>
       </section>
     </main>
+    <footer class="site-footer">
+      Made with 🖤 by <a href="https://github.com/intelagense">intelagense</a>
+    </footer>
   </body>
 </html>

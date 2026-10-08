@@ -32,6 +32,7 @@
         <a href="/">Home</a>
         <a href="/#contact">Contact</a>
         <a href="/privacy/" aria-current="page">Privacy</a>
+        <a href="/terms/">Terms</a>
       </nav>
     </header>
 
@@ -86,12 +87,21 @@
               while Exile operates.
             </p>
             <p>
+              Exile temporarily holds message text and attachment or sticker signatures
+              in memory for spam detection. This detection data is normally cleared
+              within ten minutes after the last matching message, or when the bot
+              restarts.
+            </p>
+            <p>
               Hosting systems may retain limited operational logs, such as identifiers,
               channel names, action results, and error information, for operation and
-              troubleshooting. Exile stores the Discord identifiers and settings needed
-              to operate in each server. Depending on the server's configuration, this
-              may include server, channel, role, and user identifiers; moderation
-              preferences; protection status; and configuration timestamps.
+              troubleshooting. Exile stores the Discord identifiers and configuration
+              needed to operate in supported servers, such as server, channel, and role
+              IDs and moderation settings.
+            </p>
+            <p>
+              Server configuration is retained for up to seven days after Exile is
+              removed, to allow restoration if she is re-added, and is then deleted.
             </p>
           </div>
         </section>
@@ -101,13 +111,19 @@
           <div>
             <p>
               When Exile responds to an incident, Exile posts a log inside Discord.
-              The log may contain account identifiers, message evidence, copied
-              images, channel names, and the outcome of moderation actions.
+              The log may contain usernames, account identifiers, copied message text,
+              full-text attachments, copied images, channel names, and the outcome of
+              moderation actions.
             </p>
             <p>
               These logs are ordinary Discord messages and remain in the server until
               someone with appropriate permissions deletes them. Exile does not keep a
               separate log database.
+            </p>
+            <p>
+              Copies posted in these messages can remain after the original message is
+              deleted, a user leaves, or Exile is removed from the server. Authorized
+              moderators manage these messages within Discord.
             </p>
           </div>
         </section>
@@ -122,12 +138,29 @@
               advertisers or data brokers.
             </p>
             <p>
-              Information submitted through the contact form is used to respond to your
-              message and may be processed by the site's hosting provider.
+              The contact form collects your email address, message, and optional name.
+              This information is used to respond to your message and may be processed
+              by the site's hosting provider.
+            </p>
+          </div>
+        </section>
+
+        <section class="policy-section" aria-labelledby="privacy-requests">
+          <h2 id="privacy-requests">Data requests</h2>
+          <div>
+            <p>
+              To request access to, correction of, or deletion of your data processed
+              by Exile, use the <a href="/#contact">contact form</a>. Include your
+              Discord user ID and, if available, the server ID or a relevant message
+              link so the operator can identify the data. Limited identity verification
+              may be needed to protect your information.
             </p>
           </div>
         </section>
       </div>
     </main>
+    <footer class="site-footer">
+      Made with 🖤 by <a href="https://github.com/intelagense">intelagense</a>
+    </footer>
   </body>
 </html>
